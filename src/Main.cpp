@@ -27,7 +27,7 @@
 		graphPoint.y += 250;
 	}
 
-	void DLL Graph::draw(long Line(long), bool Update(), COLORREF LineColor, HWND hWND, ULONG time)
+	void DLL Graph::draw(long Line(long), bool Update(), COLORREF LineColor, ULONG time)
 	{
 		HDC hDC = GetDC(hWND); POINT old_Point;
 		{
