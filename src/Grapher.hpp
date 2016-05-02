@@ -9,11 +9,11 @@
 #define DLL __declspec(dllimport)
 #endif
 
-namespace LineFunctions /* Biblioteka podstawowych funkcji liniowych do u¿ycia w (function(long(long)),COLORREF) void)Graph::draw.
-						Mo¿na definiowaæ oczywiœcie w³asne funkcje  przekazywaæ je jako parametr.
-						Przyk³ad : {Graph g(???,???); g.draw(XtoY,0x00FF00);}
-						rysuje korzystaj¹c z funkcji XtoY zielon¹(?) kreskê k¹tem 45* wzglêdem osi X i Y w zwy¿.
-						Przyk³ad wykresu narysowanego za pomoc¹ tych funkcji znajduje siê w pliku "Examples.bmp". */
+namespace LineFunctions /* Biblioteka podstawowych funkcji liniowych do uÂ¿ycia w (function(long(long)),COLORREF) void)Graph::draw.
+						MoÂ¿na definiowaÃ¦ oczywiÅ“cie wÂ³asne funkcje  przekazywaÃ¦ je jako parametr.
+						PrzykÂ³ad : {Graph g(???,???); g.draw(XtoY,0x00FF00);}
+						rysuje korzystajÂ¹c z funkcji XtoY zielonÂ¹(?) kreskÃª kÂ¹tem 45* wzglÃªdem osi X i Y w zwyÂ¿.
+						PrzykÂ³ad wykresu narysowanego za pomocÂ¹ tych funkcji znajduje siÃª w pliku "Examples.bmp". */
 {
 	long cache;
 
@@ -22,7 +22,7 @@ namespace LineFunctions /* Biblioteka podstawowych funkcji liniowych do u¿ycia w
 	long SinusWave(long X, long H) { if (H < 0) H = -H; return sin(X)*H; } // Y = sin (X) * H
 	long SParable(long X) { return X*X; }
 
-																		   //Funkcje konwertuj¹ce
+																		   //Funkcje konwertujÂ¹ce
 	void setData(long ch) { cache = ch; }
 	long PingPong(long X) { return PingPong(X, cache); }
 	long SinusWave(long X) { return SinusWave(X, cache); }
