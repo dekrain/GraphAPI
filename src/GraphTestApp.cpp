@@ -61,9 +61,9 @@ int _stdcall WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpLine, INT nCmdShow)
 	class Graph gp( hWnd, {10,10} );
 	gp.draw(LineFunctions::XtoY,Upd,0x0000FF,hWnd,1);
 	LineFunctions::setData(200);
-	gp.draw(LineFunctions::SinusWave,Upd,0x00FF00,hWnd,1);
-	gp.draw(LineFunctions::PingPong,Upd,0xFF0000,hWnd,1);
-	gp.draw(LineFunctions::SParable,Upd,0xFFFFFF,hWnd,1);
+	gp.draw(LineFunctions::SinusWave,Upd,0x00FF00,1);
+	gp.draw(LineFunctions::PingPong,Upd,0xFF0000,1);
+	gp.draw(LineFunctions::SParable,Upd,0xFFFFFF,1);
 	
 	MSG msg;
 	while( GetMessage( & msg, NULL, 0, 0 ) )
