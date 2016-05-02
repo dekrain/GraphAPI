@@ -9,11 +9,11 @@
 #define DLL __declspec(dllimport)
 #endif
 
-namespace LineFunctions /* Biblioteka podstawowych funkcji liniowych do u¿ycia w (function(long(long)),COLORREF) void)Graph::draw.
-						Mo¿na definiowaæ oczywiœcie w³asne funkcje  przekazywaæ je jako parametr.
-						Przyk³ad : {Graph g(???,???); g.draw(XtoY,0x00FF00);}
-						rysuje korzystaj¹c z funkcji XtoY zielon¹(?) kreskê k¹tem 45* wzglêdem osi X i Y w zwy¿.
-						Przyk³ad wykresu narysowanego za pomoc¹ tych funkcji znajduje siê w pliku "Examples.bmp". */
+namespace LineFunctions /* Biblioteka podstawowych funkcji liniowych do użycia w (function(long(long)),COLORREF) void)Graph::draw.
+						Można definiować oczywiście własne funkcje  przekazywać je jako parametr.
+						Przykład : {Graph g(???,???); g.draw(XtoY,0x00FF00);}
+						rysuje korzystając z funkcji XtoY zieloną(?) kreskę kątem 45* względem osi X i Y w zwyż.
+						Przykład wykresu narysowanego za pomocą tych funkcji znajduje się w pliku "Examples.bmp". */
 {
 	long cache;
 
@@ -22,7 +22,7 @@ namespace LineFunctions /* Biblioteka podstawowych funkcji liniowych do u¿ycia 
 	long SinusWave(long X, long H) { if (H < 0) H = -H; return sin(X)*H; } // Y = sin (X) * H
 	long SParable(long X) { return X*X; }
 
-																		   //Funkcje konwertuj¹ce
+																		   //Funkcje konwertujące
 	void setData(long ch) { cache = ch; }
 	long PingPong(long X) { return PingPong(X, cache); }
 	long SinusWave(long X) { return SinusWave(X, cache); }
@@ -31,6 +31,7 @@ namespace LineFunctions /* Biblioteka podstawowych funkcji liniowych do u¿ycia 
 class Graph
 {
 	POINT graphPoint;
+	HWND hWND;
 public: DLL Graph(HWND,POINT start);
-		void DLL draw(long function(long), bool upd(), COLORREF color, HWND, ULONG = 0);
+		void DLL draw(long function(long), bool upd(), COLORREF color, ULONG = 0);
 };
