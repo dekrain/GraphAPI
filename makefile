@@ -1,5 +1,5 @@
 all:
-	g++ Main.cpp -o Grapher.dll
+	g++ Main.cpp -shared -o Grapher.library
 test:
-	g++ GraphTestApp.cpp -o GPHTEST
+	g++ GraphTestApp.cpp Grapher.library -o GPHTEST
 	./GPHTEST
